@@ -1,0 +1,31 @@
+<div class="container">
+
+  <form (ngSubmit)="processForm()">
+
+    <fieldset>
+
+      <legend><i class="far fa-registered"></i> User registration</legend>
+
+      <div class="form group">
+        <label class="control-label" for="fname">First Name</label>
+        <input type="text" name="fname" class="form-control form-control-sm" [(ngModel)]="user.fname">
+      </div>
+
+      <div class="form group">
+        <label class="control-label" for="fname">Last Name</label>
+        <input type="text" name="lname" class="form-control form-control-sm" [(ngModel)]="user.lname">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="save"></label>
+        <div>
+          <!-- <input type="submit" value="save" class="btn btn-outline-success btn-sm"> -->
+          <button type="submit" class="btn btn-outline-success btn-sm"><i class="fas fa-save"> Save</i></button>
+        </div>
+      </div>
+
+    </fieldset>
+
+  </form>
+
+</div>  

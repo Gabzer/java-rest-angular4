@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table table-sm table-striped">
+    <thead>
+      <th>FIRST NAME</th>
+      <th>LAST NAME</th>
+      <th>OPERATIONS</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor = "let user of users">
+        <td>{{user.fname}}</td>
+        <td>{{user.lname}}</td>
+        <td>
+          <!-- <button class="btn btn-outline-danger btn-sm" (click)="deleteUser(user)">Delete</button>&nbsp; -->
+          <!-- <button class="btn btn-outline-primary btn-sm" (click)="updateUser(user)">Edit</button> -->
+          <!-- <a href="#"><i class="fa fa-trash-o" (click)="deleteUser(user)"></i></a>
+          <a href="#"><i class="fa fa-pencil-square" (click)="updateUser(user)"></i></a> -->          
+          <i class="btn-outline-danger btn-sm fas fa-trash" (click)="deleteUser(user)"></i>&nbsp;
+          <i class="btn-outline-primary btn-sm fas fa-pen-square" (click)="updateUser(user)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-outline-success btn-sm" (click)="newUser()"><i class="fas fa-plus-square"></i> New User</button>
+</div>
